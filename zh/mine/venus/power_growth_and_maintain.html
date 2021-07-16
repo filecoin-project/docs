@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>算力增长与维持 | 启明星</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/assets/venus-logo.png">
+    <meta name="description" content="GO语言实现的Filecoin分布式存储网络">
+    
+    <link rel="preload" href="/assets/css/0.styles.c83c03d3.css" as="style"><link rel="preload" href="/assets/js/app.4ee1401c.js" as="script"><link rel="preload" href="/assets/js/2.975ccc2c.js" as="script"><link rel="preload" href="/assets/js/6.feb39e0a.js" as="script"><link rel="prefetch" href="/assets/js/10.535ba603.js"><link rel="prefetch" href="/assets/js/11.9e0e0a4f.js"><link rel="prefetch" href="/assets/js/12.53797eea.js"><link rel="prefetch" href="/assets/js/13.9d13b7dd.js"><link rel="prefetch" href="/assets/js/14.a630e1d6.js"><link rel="prefetch" href="/assets/js/15.93e80b87.js"><link rel="prefetch" href="/assets/js/16.e9f5497b.js"><link rel="prefetch" href="/assets/js/17.01765216.js"><link rel="prefetch" href="/assets/js/18.9a01bea6.js"><link rel="prefetch" href="/assets/js/19.6c1649a0.js"><link rel="prefetch" href="/assets/js/20.5dc485db.js"><link rel="prefetch" href="/assets/js/21.dc750b0a.js"><link rel="prefetch" href="/assets/js/22.a98dc21b.js"><link rel="prefetch" href="/assets/js/23.9db6f2b4.js"><link rel="prefetch" href="/assets/js/24.2524fc9f.js"><link rel="prefetch" href="/assets/js/25.f31edc22.js"><link rel="prefetch" href="/assets/js/26.568bbd93.js"><link rel="prefetch" href="/assets/js/27.2079eaaa.js"><link rel="prefetch" href="/assets/js/28.19d52154.js"><link rel="prefetch" href="/assets/js/29.7df2f902.js"><link rel="prefetch" href="/assets/js/3.a84dc772.js"><link rel="prefetch" href="/assets/js/30.c7c9316f.js"><link rel="prefetch" href="/assets/js/31.a0f41829.js"><link rel="prefetch" href="/assets/js/32.832bb8d8.js"><link rel="prefetch" href="/assets/js/33.58f05d39.js"><link rel="prefetch" href="/assets/js/34.61398274.js"><link rel="prefetch" href="/assets/js/35.abc3e2ca.js"><link rel="prefetch" href="/assets/js/36.7c6798b8.js"><link rel="prefetch" href="/assets/js/37.28daf0e7.js"><link rel="prefetch" href="/assets/js/38.62ce840a.js"><link rel="prefetch" href="/assets/js/39.8334fa9a.js"><link rel="prefetch" href="/assets/js/4.2eaaf6ca.js"><link rel="prefetch" href="/assets/js/40.628b313f.js"><link rel="prefetch" href="/assets/js/41.83aa608b.js"><link rel="prefetch" href="/assets/js/42.058a12c2.js"><link rel="prefetch" href="/assets/js/43.0f76ab40.js"><link rel="prefetch" href="/assets/js/44.6b48e425.js"><link rel="prefetch" href="/assets/js/45.16d1189e.js"><link rel="prefetch" href="/assets/js/46.2765820a.js"><link rel="prefetch" href="/assets/js/47.153e6214.js"><link rel="prefetch" href="/assets/js/48.a6b1957a.js"><link rel="prefetch" href="/assets/js/49.72c3a38d.js"><link rel="prefetch" href="/assets/js/5.a7f7b3cb.js"><link rel="prefetch" href="/assets/js/50.2a6dbe96.js"><link rel="prefetch" href="/assets/js/51.21be3df7.js"><link rel="prefetch" href="/assets/js/52.70c4e9f1.js"><link rel="prefetch" href="/assets/js/53.f24a4da1.js"><link rel="prefetch" href="/assets/js/54.9c27966b.js"><link rel="prefetch" href="/assets/js/55.76da8ad2.js"><link rel="prefetch" href="/assets/js/56.1c7ec045.js"><link rel="prefetch" href="/assets/js/57.2fa3ac07.js"><link rel="prefetch" href="/assets/js/58.f122bd25.js"><link rel="prefetch" href="/assets/js/59.6c042986.js"><link rel="prefetch" href="/assets/js/60.503da129.js"><link rel="prefetch" href="/assets/js/61.6186e8a4.js"><link rel="prefetch" href="/assets/js/62.cff5f1d9.js"><link rel="prefetch" href="/assets/js/63.ce7fd152.js"><link rel="prefetch" href="/assets/js/64.176d9058.js"><link rel="prefetch" href="/assets/js/65.d74af03f.js"><link rel="prefetch" href="/assets/js/66.a50e899d.js"><link rel="prefetch" href="/assets/js/67.2dfc488b.js"><link rel="prefetch" href="/assets/js/68.8ab4523d.js"><link rel="prefetch" href="/assets/js/69.234a48eb.js"><link rel="prefetch" href="/assets/js/7.87aecade.js"><link rel="prefetch" href="/assets/js/70.6525bcf5.js"><link rel="prefetch" href="/assets/js/71.76c75cd1.js"><link rel="prefetch" href="/assets/js/72.4f32aaaf.js"><link rel="prefetch" href="/assets/js/73.a3cb6531.js"><link rel="prefetch" href="/assets/js/74.9c8ecacc.js"><link rel="prefetch" href="/assets/js/75.00a36545.js"><link rel="prefetch" href="/assets/js/76.675b5669.js"><link rel="prefetch" href="/assets/js/77.ef01f71a.js"><link rel="prefetch" href="/assets/js/78.05408a00.js"><link rel="prefetch" href="/assets/js/79.c16d475b.js"><link rel="prefetch" href="/assets/js/8.335d24d4.js"><link rel="prefetch" href="/assets/js/80.e2d48ff1.js"><link rel="prefetch" href="/assets/js/81.25710279.js"><link rel="prefetch" href="/assets/js/82.87bb01e4.js"><link rel="prefetch" href="/assets/js/83.b0b1e902.js"><link rel="prefetch" href="/assets/js/84.67b54f25.js"><link rel="prefetch" href="/assets/js/85.b6a89dde.js"><link rel="prefetch" href="/assets/js/86.db02518a.js"><link rel="prefetch" href="/assets/js/87.ee06d328.js"><link rel="prefetch" href="/assets/js/88.e151b027.js"><link rel="prefetch" href="/assets/js/89.a92117ec.js"><link rel="prefetch" href="/assets/js/9.bf27e7a6.js"><link rel="prefetch" href="/assets/js/90.20366b53.js"><link rel="prefetch" href="/assets/js/91.020c2809.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c83c03d3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zh/" class="home-link router-link-active"><img src="/assets/venus-logo-title.svg" alt="启明星" class="logo"> <span class="site-name can-hide">启明星</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/zh/guide/" class="nav-link">
+  快速上手
+</a></div><div class="nav-item"><a href="/zh/modules/" class="nav-link">
+  启明星模块
+</a></div><div class="nav-item"><a href="/zh/advanced/" class="nav-link">
+  进阶
+</a></div><div class="nav-item"><a href="/zh/incubation/" class="nav-link">
+  孵化器
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/mine/venus/power_growth_and_maintain.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/zh/guide/" class="nav-link">
+  快速上手
+</a></div><div class="nav-item"><a href="/zh/modules/" class="nav-link">
+  启明星模块
+</a></div><div class="nav-item"><a href="/zh/advanced/" class="nav-link">
+  进阶
+</a></div><div class="nav-item"><a href="/zh/incubation/" class="nav-link">
+  孵化器
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/mine/venus/power_growth_and_maintain.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="算力增长与维持"><a href="#算力增长与维持" class="header-anchor">#</a> 算力增长与维持</h1> <h2 id="源码编译"><a href="#源码编译" class="header-anchor">#</a> 源码编译</h2> <p>   一些较新的CPU架构,如AMD的Zen和Intel的lce Lake,支持SHA扩展.启用这些扩展会明显加快扇区封装速度,这时请用源码编译filecoin-ffi:</p> <div class="language- extra-class"><pre class="language-text"><code>export RUSTFLAGS=&quot;-C target-cpu=native -g&quot;
+export FFI_BUILD_FROM_SOURCE=1
+</code></pre></div><p>   官方提供的是可移植的静态链接库,虽可以在多种CPU上运行,但封装扇区速度特别慢,会引起ticket过期.</p> <p><a href="https://github.com/filecoin-project/lotus/discussions/6071" target="_blank" rel="noopener noreferrer">参考配置<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><a href="https://docs.filecoin.io/mine/hardware-requirements/#general-hardware-requirements" target="_blank" rel="noopener noreferrer">最低硬件要求<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> <img src="/assets/img/min_hardware_requirements.8d60560b.png" alt="min_hardware_requirements"></p> <h2 id="扇区封装"><a href="#扇区封装" class="header-anchor">#</a> 扇区封装</h2> <h3 id="加速设置"><a href="#加速设置" class="header-anchor">#</a> 加速设置</h3> <div class="language- extra-class"><pre class="language-text"><code># See https://github.com/filecoin-project/bellman
+export BELLMAN_CPU_UTILIZATION=0.875
+</code></pre></div><p>   BELLMAN_CPU_UTILIZATION是一个可选的可变来指定所述多幂计算的比例要被移动到一个CPU在平行于GPU。这是为了保持所有硬件都被占用。间隔必须是0和之间的数字1。该值0.875是一个很好的起点，但如果您想要最佳设置，您应该尝试使用它。不同的硬件设置将导致不同的最佳值。省略此环境变量也可能是最佳选择。</p> <div class="language- extra-class"><pre class="language-text"><code># See https://github.com/filecoin-project/rust-fil-proofs/
+export FIL_PROOFS_MAXIMIZE_CACHING=1 # More speed at RAM cost (1x sector-size of RAM - 32 GB).
+export FIL_PROOFS_USE_GPU_COLUMN_BUILDER=1 # precommit2 GPU acceleration
+export FIL_PROOFS_USE_GPU_TREE_BUILDER=1
+
+# The following increases speed of PreCommit1 at the cost of using a full
+# CPU Core-Complex rather than a single core. Should be used with CPU affinities set!
+# See https://github.com/filecoin-project/rust-fil-proofs/ and the seal workers guide.
+export FIL_PROOFS_USE_MULTICORE_SDR=1
+</code></pre></div><p>   如果您只有 128 GiB 的 RAM，则需要确保您的系统提供至少 256 GiB 的超快速交换（最好是 NVMe SSD），否则您将无法密封扇区：</p> <div class="language- extra-class"><pre class="language-text"><code>sudo fallocate -l 256G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+# show current swap spaces and take note of the current highest priority
+swapon --show
+# append the following line to /etc/fstab (ensure highest priority) and then reboot
+# /swapfile swap swap pri=50 0 0
+sudo reboot
+# check a 256GB swap file is automatically mounted and has the highest priority
+swapon --show
+
+</code></pre></div><p><a href="https://docs.filecoin.io/mine/lotus/miner-setup" target="_blank" rel="noopener noreferrer">矿工设置<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h3 id="sealer"><a href="#sealer" class="header-anchor">#</a> sealer</h3> <ul><li>sealer需要准备好来自worker的API连接,如果worker不在同一机器上,则需要将其设置为0.0.0.0允许所有IP访问,RemoteListenAddress为该miner对外的ip地址,即worker访问sealer的ip地址,通常是矿工的ip地址和API端口:</li></ul> <div class="language- extra-class"><pre class="language-text"><code>[API]
+  # Binding address for the miner API
+  ListenAddress = &quot;/ip4/127.0.0.1/tcp/2345/http&quot;
+  # This should be set to the miner API address as seen externally
+  RemoteListenAddress = &quot;127.0.0.1:2345&quot;
+  # General network timeout value
+  Timeout = &quot;30s&quot;
+
+</code></pre></div><ul><li>存储扇区控制矿工是否可以执行某些密封操作。根据设置和其他密封工人的使用，您可能需要修改一些选项</li></ul> <div class="language- extra-class"><pre class="language-text"><code>[Storage]
+  # Upper bound on how many sectors can be fetched in parallel by the storage system at a time(存储系统一次可并行获取扇区的上限)
+  ParallelFetchLimit = 10
+  # Sealing steps that the miner can perform itself. Sometimes we have a dedicated seal worker to do them and do not want the sealer to commit any resources for this.
+  AllowAddPiece = true
+  AllowPreCommit1 = true
+  AllowPreCommit2 = true
+  AllowCommit = true
+  AllowUnseal = true
+
+</code></pre></div><ul><li>质押一个Sector</li></ul> <div class="language- extra-class"><pre class="language-text"><code>venus-sealer sectors pledge
+</code></pre></div><p>默认情况下这将保证约 538 天的空间</p> <ul><li>检查密封作业是否已经开始及进度</li></ul> <div class="language- extra-class"><pre class="language-text"><code>venus-sealer sealing jobs
+venus-sealer sectors list
+venus-sealer sealing workers # 当新的密封完成时,pSet: No将变成 pSet:YES
+</code></pre></div><ul><li>自定义存储布局</li></ul> <p>自定义密封位置</p> <div class="language- extra-class"><pre class="language-text"><code>venus-sealer storage attach --init --seal &lt;PATH_FOR_SEALING_STORAGE&gt;
+</code></pre></div><p>自定义存储位置</p> <div class="language- extra-class"><pre class="language-text"><code>venus-sealer storage attach --init --store &lt;PATH_FOR_LONG_TERM_STORAGE&gt;
+</code></pre></div><p>列出存储位置</p> <div class="language- extra-class"><pre class="language-text"><code>venus-sealer storage list
+</code></pre></div><p>要将数据从一个位置移动到另一个位置，请按照<a href="https://docs.filecoin.io/mine/lotus/miner-lifecycle" target="_blank" rel="noopener noreferrer">Miner 生命周期指南<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>中的说明进行操作。要完全删除一个位置，请storage.json手动编辑并重新启动您的矿工。</p> <h3 id="worker"><a href="#worker" class="header-anchor">#</a> worker</h3> <h4 id="任务资源表"><a href="#任务资源表" class="header-anchor">#</a> 任务资源表</h4> <p>默认资源表:
+<img src="/assets/img/task_resource_table.d8cae9ad.png" alt="task_resource_table"></p> <blockquote><p>在密封期间,大量数据在worker之间移动/复制,因此worker之间必须有良好的网络连接.</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>* AddPiece 可以使用多个线程，这个值很可能在不久的将来会发生变化
+** 当与FIL_PROOFS_USE_MULTICORE_SDR=1env var 一起使用时，PreCommit1 可以使用多个内核（最多共享 L3 缓存的内核数）
+*** 取决于数量可用线程，该值表示：
+
+ 12  * 0.92 = 11
+ 16  * 0.92 = 14
+ 24  * 0.92 = 22
+ 32  * 0.92 = 29
+ 64  * 0.92 = 58
+ 128 * 0.92 = 117
+    
+**** Commit1 步骤在 CPU 时间方面非常便宜，并且会阻塞 Commit2 步骤。将其分配给零个线程使其更有可能以更高的优先级进行调度。
+
+Unseal 任务与 PreCommit1 任务具有相同的资源使用。
+</code></pre></div><ul><li>环境变量</li></ul> <div class="language- extra-class"><pre class="language-text"><code># MINER_API_INFO as obtained before
+export TMPDIR=/fast/disk/folder3                    # used when sealing
+export MINER_API_INFO:&lt;TOKEN&gt;:/ip4/&lt;miner_api_address&gt;/tcp/&lt;port&gt;/http`
+export BELLMAN_CPU_UTILIZATION=0.875      # optimal value depends on exact hardware
+export FIL_PROOFS_MAXIMIZE_CACHING=1
+export FIL_PROOFS_USE_GPU_COLUMN_BUILDER=1 # when GPU is available
+export FIL_PROOFS_USE_GPU_TREE_BUILDER=1   # when GPU is available
+export FIL_PROOFS_PARAMETER_CACHE=/fast/disk/folder # &gt; 100GiB!
+export FIL_PROOFS_PARENT_CACHE=/fast/disk/folder2   # &gt; 50GiB!
+
+# The following increases speed of PreCommit1 at the cost of using a full
+# CPU core-complex rather than a single core.
+# See https://github.com/filecoin-project/rust-fil-proofs/ and the
+# &quot;Worker co-location&quot; section below.
+export FIL_PROOFS_USE_MULTICORE_SDR=1
+
+</code></pre></div><ul><li>运行worker</li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ ./venus-worker run --miner-addr=&lt;/ip4/sealer-ip/tcp/2345&gt; --miner-token=&lt;token&gt;  --listen=&lt;0.0.0.0:3458&gt; &lt;flags&gt;
+
+   --addpiece                    enable addpiece (default: true)
+   --precommit1                  enable precommit1 (32G sectors: 1 core, 128GiB RAM) (default: true)
+   --unseal                      enable unsealing (32G sectors: 1 core, 128GiB RAM) (default: true)
+   --precommit2                  enable precommit2 (32G sectors: multiple cores, 96GiB RAM) (default: true)
+   --commit                      enable commit (32G sectors: multiple cores or GPUs, 128GiB RAM + 64GiB swap) (default: true)
+
+</code></pre></div><p>-- 设置本地存储</p> <div class="language- extra-class"><pre class="language-text"><code># 默认会在.venusworker目录下,可以通过attach命令自己添加一个目录
+$  ./venus-worker storage attach --init --seal --store &lt;local_path&gt;
+$ ./venus-worker info
+Worker version:  1.0.0
+CLI version: lotus-worker version 1.2.1
+
+Session: b1f47ebd-d5e8-485f-8df9-c70773f2c644
+Enabled: true
+Hostname: 200-17
+CPUs: 128; GPUs: []
+RAM: 503.5 GiB; Swap: 0 B
+Reserved memory: 163.7 GiB
+Task types: FIN GET UNS C1 C2 PC2 PC1 AP 
+
+e918d62b-a2bd-4674-8c8f-53e5aab913ae:
+        Weight: 10; Use: Seal 
+        Local: /home/test/.venusworker
+aafdb8ec-eb76-4127-b046-36e6ae97797f:
+        Weight: 10; Use: Seal Store
+        Local: /home/test/data
+</code></pre></div><p>-- 验证是否连接到sealer</p> <div class="language- extra-class"><pre class="language-text"><code>$ ./venus-sealer sealing workers
+Worker 0, host computer
+        CPU:  [                                                                ] 0 core(s) in use
+        RAM:  [||||||||||||||||||                                              ] 28% 18.1 GiB/62.7 GiB
+        VMEM: [||||||||||||||||||                                              ] 28% 18.1 GiB/62.7 GiB
+        GPU: GeForce RTX 2080, not used
+
+Worker 1, host othercomputer
+        CPU:  [                                                                ] 0 core(s) in use
+        RAM:  [||||||||||||||                                                  ] 23% 14 GiB/62.7 GiB
+        VMEM: [||||||||||||||                                                  ] 23% 14 GiB/62.7 GiB
+        GPU: GeForce RTX 2080, not used
+
+</code></pre></div><blockquote><p>这个时候在venus-sealer产生一个新的pledge，在sealer做完addPiece后会下发到worker去做</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>2021-07-13T16:28:21.005+0800    DEBUG   advmgr  sector-storage/sched.go:354     SCHED 1 queued; 4 open windows
+2021-07-13T16:28:21.008+0800    DEBUG   advmgr  sector-storage/sched.go:449     SCHED windows: [{allocated:{memUsedMin:0 memUsedMax:0 gpuUsed:false cpuUse:0 cond:&lt;nil&gt;} todo:[]} {allocated:{memUsedMin:0 memUsedMax:0 gpuUsed:false cpuUse:0 cond:&lt;nil&gt;} todo:[]} {allocated:{memUsedMin:0 memUsedMax:0 gpuUsed:false cpuUse:0 cond:&lt;nil&gt;} todo:[]} {allocated:{memUsedMin:0 memUsedMax:0 gpuUsed:false cpuUse:0 cond:&lt;nil&gt;} todo:[]}]
+2021-07-13T16:28:21.008+0800    DEBUG   advmgr  sector-storage/sched.go:450     SCHED Acceptable win: [[2 3]]
+2021-07-13T16:28:21.008+0800    DEBUG   advmgr  sector-storage/sched.go:465     SCHED try assign sqi:0 sector 7 to window 2
+2021-07-13T16:28:21.008+0800    DEBUG   advmgr  sector-storage/sched.go:472     SCHED ASSIGNED sqi:0 sector 7 task seal/v0/precommit/1 to window 2
+2021-07-13T16:28:21.008+0800    DEBUG   advmgr  sector-storage/sched.go:354     SCHED 2 queued; 3 open windows
+2021-07-13T16:28:21.008+0800    DEBUG   advmgr  sector-storage/sched_worker.go:368      assign worker sector 7
+2021-07-13T16:28:21.010+0800    DEBUG   advmgr  sector-storage/sched.go:449     SCHED windows: [{allocated:{memUsedMin:0 memUsedMax:0 gpuUsed:false cpuUse:0 cond:&lt;nil&gt;} todo:[]} {allocated:{memUsedMin:0 memUsedMax:0 gpuUsed:false cpuUse:0 cond:&lt;nil&gt;} todo:[]} {allocated:{memUsedMin:0 memUsedMax:0 gpuUsed:false cpuUse:0 cond:&lt;nil&gt;} todo:[]}]
+2021-07-13T16:28:21.010+0800    DEBUG   advmgr  sector-storage/sched.go:450     SCHED Acceptable win: [[2] [2]]
+2021-07-13T16:28:21.010+0800    DEBUG   advmgr  sector-storage/sched.go:465     SCHED try assign sqi:0 sector 5 to window 2
+2021-07-13T16:28:21.010+0800    DEBUG   advmgr  sector-storage/sched.go:472     SCHED ASSIGNED sqi:0 sector 5 task seal/v0/precommit/1 to window 2
+2021-07-13T16:28:21.010+0800    DEBUG   advmgr  sector-storage/sched.go:465     SCHED try assign sqi:1 sector 6 to window 2
+2021-07-13T16:28:21.010+0800    DEBUG   advmgr  sector-storage/sched.go:472     SCHED ASSIGNED sqi:1 sector 6 task seal/v0/precommit/1 to window 2
+2021-07-13T16:28:21.010+0800    DEBUG   advmgr  sector-storage/sched.go:354     SCHED 0 queued; 3 open windows
+2021-07-13T16:28:21.010+0800    DEBUG   advmgr  sector-storage/sched_worker.go:278      task done       {&quot;workerid&quot;: &quot;3b594f87-afc3-4d16-b905-eabe288fb50b&quot;}
+2021-07-13T16:28:21.010+0800    DEBUG   advmgr  sector-storage/sched.go:354     SCHED 0 queued; 3 open windows
+2021-07-13T16:28:21.011+0800    DEBUG   advmgr  sector-storage/sched_worker.go:368      assign worker sector 5
+2021-07-13T16:28:21.011+0800    DEBUG   advmgr  sector-storage/sched_worker.go:368      assign worker sector 6
+2021-07-13T16:28:21.011+0800    DEBUG   advmgr  sector-storage/sched.go:354     SCHED 0 queued; 4 open windows
+2021-07-13T16:28:21.013+0800    DEBUG   advmgr  sector-storage/sched_worker.go:278      task done       {&quot;workerid&quot;: &quot;3b594f87-afc3-4d16-b905-eabe288fb50b&quot;}
+2021-07-13T16:28:21.013+0800    DEBUG   advmgr  sector-storage/sched.go:354     SCHED 0 queued; 4 open windows
+2021-07-13T16:28:21.013+0800    DEBUG   advmgr  sector-storage/sched_worker.go:278      task done       {&quot;workerid&quot;: &quot;3b594f87-afc3-4d16-b905-eabe288fb50b&quot;}
+</code></pre></div><ul><li>如果worker的硬件资源不足，sealer会取消分配的任务,这时需要及时整理空间，分配更多的资源给worker。</li></ul> <div class="language- extra-class"><pre class="language-text"><code># worker: 提示仍无被DELETE，并且清理了本地文件
+2021-07-14T16:12:52.217+0800    INFO    main    venus-worker/main.go:515        Worker registered successfully, waiting for tasks
+2021-07-14T16:18:51.835+0800    DEBUG   advmgr  sector-storage/worker_local.go:129      acquired sector {{1921 9} 8} (e:0; a:1): {{0 0} /home/litao/.venusworker/unsealed/s-t01921-9  }
+2021-07-14T16:21:02.814+0800    INFO    stores  stores/http_handler.go:58       SERVE GET /remote/unsealed/s-t01921-9
+2021-07-14T16:21:34.400+0800    INFO    stores  stores/http_handler.go:135      SERVE DELETE /remote/unsealed/s-t01921-9
+2021-07-14T16:21:34.401+0800    INFO    stores  stores/local.go:608     remove /home/test/.venusworker/unsealed/s-t01921-9
+
+# sealer: 提示磁盘空间不足
+2021-07-14T16:21:02.802+0800    DEBUG   advmgr  sector-storage/sched.go:354     SCHED 1 queued; 6 open windows
+2021-07-14T16:21:02.805+0800    DEBUG   stores  stores/index.go:400     not allocating on e918d62b-a2bd-4674-8c8f-53e5aab913ae, out of space (available: 68799750144, need: 518832049356)
+2021-07-14T16:21:02.805+0800    DEBUG   stores  stores/index.go:400     not allocating on aafdb8ec-eb76-4127-b046-36e6ae97797f, out of space (available: 103159488512, need: 518832049356)
+2021-07-14T16:21:02.806+0800    DEBUG   stores  stores/index.go:400     not allocating on e918d62b-a2bd-4674-8c8f-53e5aab913ae, out of space (available: 68799750144, need: 518832049356)
+2021-07-14T16:21:02.806+0800    DEBUG   stores  stores/index.go:400     not allocating on aafdb8ec-eb76-4127-b046-36e6ae97797f, out of space (available: 103159488512, need: 518832049356)
+2021-07-14T16:21:02.808+0800    DEBUG   stores  stores/index.go:400     not allocating on e918d62b-a2bd-4674-8c8f-53e5aab913ae, out of space (available: 68799750144, need: 518832049356)
+2021-07-14T16:21:02.808+0800    DEBUG   stores  stores/index.go:400     not allocating on aafdb8ec-eb76-4127-b046-36e6ae97797f, out of space (available: 103159488512, need: 518832049356)
+2021-07-14T16:21:02.809+0800    DEBUG   stores  stores/index.go:400     not allocating on e918d62b-a2bd-4674-8c8f-53e5aab913ae, out of space (available: 68799750144, need: 518832049356)
+2021-07-14T16:21:02.809+0800    DEBUG   stores  stores/index.go:400     not allocating on aafdb8ec-eb76-4127-b046-36e6ae97797f, out of space (available: 103159488512, need: 518832049356)
+</code></pre></div><ul><li>启用自定义GPU</li></ul> <div class="language- extra-class"><pre class="language-text"><code># 测试未明确支持的 GPU，请设置以下环境变量:
+export BELLMAN_CUSTOM_GPU=&quot;&lt;NAME&gt;:&lt;NUMBER_OF_CORES&gt;&quot;
+# 尝试具有 1536 个内核的 GeForce GTX 1660 Ti 的示例：
+export BELLMAN_CUSTOM_GPU=&quot;GeForce GTX 1660 Ti:1536&quot;
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/filecoin-project/venus-docs/edit/master/docs/zh/mine/venus/power_growth_and_maintain.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">2021/7/13 下午6:39:29</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.4ee1401c.js" defer></script><script src="/assets/js/2.975ccc2c.js" defer></script><script src="/assets/js/6.feb39e0a.js" defer></script>
+  </body>
+</html>
